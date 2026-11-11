@@ -190,6 +190,8 @@ fun PolohaKarta() {
 
                                 val location = manager.getLastKnownLocation(
                                     LocationManager.NETWORK_PROVIDER
+                                ) ?: manager.getLastKnownLocation(
+                                    LocationManager.GPS_PROVIDER
                                 )
                                 souradnice = location?.let {
                                     "${it.latitude}, ${it.longitude}"
