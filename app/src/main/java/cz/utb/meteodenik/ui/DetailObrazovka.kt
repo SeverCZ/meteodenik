@@ -15,6 +15,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import cz.utb.meteodenik.R
+import android.content.res.Configuration
+import androidx.compose.ui.tooling.preview.Preview
+import cz.utb.meteodenik.ui.theme.MeteodenikTheme
 
 private const val TAG = "Cyklus"
 @Composable
@@ -24,9 +27,9 @@ fun DetailObrazovka(mesto: String, teplota: Double) {
             Text(text = mesto, style = MaterialTheme.typography.headlineMedium)
             Text(
                 text = if (teplota.isNaN()) {
-                    stringResource(R.string.teplota_chybi)        // extra chybělo
+                    stringResource(R.string.teplota_chybi)
                 } else {
-                    stringResource(R.string.teplota_format, teplota)
+                    stringResource(R.string.detail_souhrn, mesto, teplota)
                 }
             )
             SdiletTlacitko(mesto = mesto, teplota = teplota)
@@ -50,5 +53,34 @@ fun SdiletTlacitko(mesto: String, teplota: Double) {
         }
     }) {
         Text(stringResource(R.string.sdilet_zaznam))
+    }
+}
+@Preview(
+    name = "Světlý režim",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO
+)
+@Composable
+fun DetailSvetlyPreview() {
+    MeteodenikTheme(darkTheme = false) {
+        DetailObrazovka(
+            mesto = "Zlín",
+            teplota = 21.4
+        )
+    }
+}
+
+@Preview(
+    name = "Tmavý režim",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
+@Composable
+fun DetailTmavyPreview() {
+    MeteodenikTheme(darkTheme = true) {
+        DetailObrazovka(
+            mesto = "Zlín",
+            teplota = 21.4
+        )
     }
 }

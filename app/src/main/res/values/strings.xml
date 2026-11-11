@@ -7,4 +7,27 @@
     <string name="sdileny_text">%1$s: %2$.1f °C — zapsáno v MeteoDeníku</string>
     <string name="teplota_format">%1$.1f °C</string>
     <string name="teplota_chybi">Teplota není k dispozici</string>
+    <string name="poloha_zjistit">Zjistit moji polohu</string>
+    <string name="zapsat_zaznam">Zapsat záznam</string>
+    <string name="detail_souhrn">%1$s má právě %2$.1f °C</string>
+
+    <plurals name="pocet_zaznamu">
+        <item quantity="one">Moje města — %d záznam</item>
+        <item quantity="few">Moje města — %d záznamy</item>
+        <item quantity="many">Moje města — %d záznamu</item>
+        <item quantity="other">Moje města — %d záznamů</item>
+    </plurals>
+
+    <string name="poloha_odmitnuta">Přístup k poloze byl zamítnut.</string>
+    <string name="poloha_titulek">Přístup k poloze</string>
+    <string name="poloha_vysvetleni">MeteoDeník potřebuje přibližnou polohu, aby mohl určit nejbližší město.</string>
+    <string name="poloha_znovu">Zkusit znovu</string>
+    <string name="poloha_povolit">Povolit</string>
+    <string name="poloha_natrvalo">Přístup k poloze není povolen. Můžeš ho změnit v nastavení aplikace.</string>
+    <string name="otevrit_nastaveni">Otevřít nastavení</string>
+    <string name="poloha_povolena">Přístup k poloze je povolen.</string>
+    <string name="nacist_polohu">Načíst souřadnice</string>
+    <string name="souradnice">Souřadnice: %1$s</string>
+    <string name="poloha_nedostupna">Poloha není dostupná.</string>
+    <string name="zrusit">Zrušit</string>
 </resources>

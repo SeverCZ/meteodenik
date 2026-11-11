@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather Diary</string>
+    <string name="title_activity_detail_mesta">City Detail</string>
+    <string name="otevri_detail">Open city details</string>
+    <string name="mesto_nezname">Unknown city</string>
+    <string name="sdilet_zaznam">Share record</string>
+    <string name="sdileny_text">%1$s: %2$.1f °C — recorded in Weather Diary</string>
+    <string name="teplota_format">%1$.1f °C</string>
+    <string name="teplota_chybi">Temperature is not available</string>
+
+    <string name="poloha_zjistit">Find my location</string>
+    <string name="zapsat_zaznam">Add record</string>
+    <string name="detail_souhrn">%1$s is currently %2$.1f °C</string>
+
+    <plurals name="pocet_zaznamu">
+        <item quantity="one">My cities — %d record</item>
+        <item quantity="other">My cities — %d records</item>
+    </plurals>
+
+    <string name="poloha_odmitnuta">Location permission was denied.</string>
+    <string name="poloha_titulek">Location permission</string>
+    <string name="poloha_vysvetleni">Weather Diary needs your approximate location to find the nearest city.</string>
+    <string name="poloha_znovu">Try again</string>
+    <string name="poloha_povolit">Allow</string>
+    <string name="poloha_natrvalo">Location permission is not granted. You can change it in the app settings.</string>
+    <string name="otevrit_nastaveni">Open settings</string>
+    <string name="poloha_povolena">Location permission granted.</string>
+    <string name="nacist_polohu">Get coordinates</string>
+    <string name="souradnice">Coordinates: %1$s</string>
+    <string name="poloha_nedostupna">Location is unavailable.</string>
+    <string name="zrusit">Cancel</string>
+</resources>
