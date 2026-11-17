@@ -1,3 +1,4 @@
+
 <resources>
     <string name="app_name">Meteodenik</string>
     <string name="title_activity_detail_mesta">DetailMestaActivity</string>
@@ -30,4 +31,12 @@
     <string name="souradnice">Souřadnice: %1$s</string>
     <string name="poloha_nedostupna">Poloha není dostupná.</string>
     <string name="zrusit">Zrušit</string>
+
+    <string name="mesta_titulek">Moje města</string>
+    <string name="mesta_prazdno">Zatím tu není žádné město. Přidejte první.</string>
+    <string name="mesto_pole_label">Název města</string>
+    <string name="mesto_pridat">Přidat</string>
+    <string name="mesto_teplota">%1$.1f °C</string>
+    <string name="mesto_teplota_neznama">Teplotu zatím neznáme</string>
+    <string name="mesto_avatar_popis">Značka města</string>
 </resources>

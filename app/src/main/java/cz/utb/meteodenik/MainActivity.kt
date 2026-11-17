@@ -1,21 +1,15 @@
+
 package cz.utb.meteodenik
 
 import android.content.IntentFilter
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import cz.utb.meteodenik.ui.theme.MeteodenikTheme
-import android.util.Log
 import androidx.core.content.ContextCompat
-import cz.utb.meteodenik.ui.SeznamMestObrazovka
+import cz.utb.meteodenik.ui.MestaObrazovka
+import cz.utb.meteodenik.ui.theme.MeteodenikTheme
 
 private const val TAG = "Cyklus"
 
@@ -28,10 +22,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "MainActivity  onCreate   (savedInstanceState = $savedInstanceState)")
+
         enableEdgeToEdge()
+
         setContent {
             MeteodenikTheme {
-                SeznamMestObrazovka()
+                MestaObrazovka()
             }
         }
     }
@@ -39,6 +35,7 @@ class MainActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "MainActivity  onStart")
+
         ContextCompat.registerReceiver(
             this,
             receiver,
@@ -71,21 +68,5 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "MainActivity  onDestroy")
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Ahoj $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MeteodenikTheme {
-        Greeting("Android")
     }
 }
